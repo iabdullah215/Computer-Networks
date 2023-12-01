@@ -50,19 +50,15 @@ Firstly, add serial ports from the Physical section in the routers. Now use the 
 The given IP addresses, 193.168.1.0, 193.168.2.0, 193.168.3.0, and 193.168.4.0 can be divided into four subnets, each accommodating up to 64 IP addresses using a subnet mask of 255.255.255.192 or /26 in CIDR notation. The /26 mask provides 2^6 or 64 possible host addresses per subnet, leaving 2 addresses reserved for the network address and broadcast address. The subnet ranges and their assignable IP addresses are as follows: the first subnet is 193.168.1.0 to 193.168.1.63, with assignable IP addresses ranging from 193.168.1.1 to 193.168.1.62. The second subnet range is 193.168.1.64 to 193.168.1.128, with assignable IP addresses ranging from 193.168.1.65 to 193.168.1.126. Similarly, the third and fourth subnet ranges are 193.168.1.128 to 193.168.1.191 and 193.168.1.192 to 193.168.1.255, respectively. By dividing these IP addresses into subnets, network administrators can manage and allocate IP addresses more efficiently, allowing for better utilization of available IP address space.
 
 # CALCULATIONS:
-IPs used: 193.168.1.0, 193.168.2.0, 193.168.3.0 and 193.168.4.0
-2^2 = 4 (Number of networks)
-2^6 = 26 (Number of hosts)
-64-2 = 64 (IP that can be assigned)
-Subnet mask = 255.255.255.192 /26
-Binary = 11111111.11111111.11111111.11000000
+IPs used: 193.168.1.0, 193.168.2.0, 193.168.3.0 and 193.168.4.0<br>2^2 = 4 (Number of networks)<br>2^6 = 26 (Number of hosts)<br>64-2 = 64 (IP that can be assigned)<br>Subnet mask = 255.255.255.192 /26<br>Binary = 11111111.11111111.11111111.11000000
 
 # TABLE:
 
-RANGE	ASSIGNABLE IPs
+| Range                        | Assignable IPs               |
+|------------------------------|------------------------------|
+| (1,2,3,4).0 – (1,2,3,4).63   | (1,2,3,4).1 –(1,2,3,4).62    |
+| (1,2,3,4).64 –(1,2,3,4).127  | (1,2,3,4).65 –(1,2,3,4).126  |
+| (1,2,3,4).128 –(1,2,3,4).191 | (1,2,3,4).129 –(1,2,3,4).190 |
+| (1,2,3,4).192 –(1,2,3,4).255 | (1,2,3,4).193 –(1,2,3,4).254 |
 
-(1,2,3,4).0 – (1,2,3,4).63 	    (1,2,3,4).1 –(1,2,3,4).62
-(1,2,3,4).64 –(1,2,3,4).127	    (1,2,3,4).65 –(1,2,3,4).126
-(1,2,3,4).128 –(1,2,3,4).191	  (1,2,3,4).129 –(1,2,3,4).190
-(1,2,3,4).192 –(1,2,3,4).255	  (1,2,3,4).193 –(1,2,3,4).254
 
